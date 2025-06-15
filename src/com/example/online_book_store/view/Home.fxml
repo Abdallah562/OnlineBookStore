@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.online_book_store.controller.HomeController"
+      spacing="10" alignment="CENTER" prefHeight="400" prefWidth="600">
+    <Button text="Manage Personal Account" onAction="#goToManageAccount" maxWidth="200" />
+    <Button text="Browse Books" onAction="#goToBrowseBooks" maxWidth="200" />
+    <Button text="Order History and Reviews" onAction="#goToOrderHistory" maxWidth="200" />
+    <Button text="Go To Main Menu" onAction="#goToMainMenu" maxWidth="200" />
+
+</VBox>

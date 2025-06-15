@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.online_book_store.controller.AdminViewController" vgap="10" hgap="10" alignment="BASELINE_CENTER"
+          minWidth="800" minHeight="600">
+
+
+    <Button text="Back To Main View" onAction="#navigateToMainView" GridPane.rowIndex="1" GridPane.columnIndex="0"  maxWidth="200"/>
+    <Button text="Print All Books" onAction="#printBooks" GridPane.rowIndex="2" GridPane.columnIndex="0"  maxWidth="200"/>
+    <Button text="Add Book" onAction="#navigateToAddBookView" GridPane.rowIndex="3" GridPane.columnIndex="0"  maxWidth="200"/>
+    <Button text="Edit Book" onAction="#navigateToEditBookView" GridPane.rowIndex="4" GridPane.columnIndex="0"  maxWidth="200"/>
+    <Button text="Delete Book" onAction="#navigateToDeleteBookView" GridPane.rowIndex="5" GridPane.columnIndex="0" maxWidth="200"/>
+     <Button text="Manage Orders" onAction="#navigateToOrdersManagerView" GridPane.rowIndex="6" GridPane.columnIndex="0" maxWidth="200"/>
+    <Button text="View Inventory Report" onAction="#navigateToInventoryView" GridPane.rowIndex="7" GridPane.columnIndex="0" maxWidth="200"/>
+    <Button text="Manage Categories" onAction="#navigateToManageCategoriesView" GridPane.rowIndex="8" GridPane.columnIndex="0"  maxWidth="200"/>
+</GridPane>

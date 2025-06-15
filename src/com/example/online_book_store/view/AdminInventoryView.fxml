@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.online_book_store.controller.AdminInventoryController"
+            prefHeight="600.0" prefWidth="800.0">
+
+
+        <Label text="Inventory Report" layoutX="20.0" layoutY="20.0" style="-fx-font-size: 20; -fx-font-weight: bold;" GridPane.rowIndex="0"/>
+
+        <TableView fx:id="inventoryTable" layoutX="20.0" layoutY="60.0" prefHeight="300.0" prefWidth="750.0" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="bookIdColumn" text="Book ID" />
+                <TableColumn fx:id="titleColumn" text="Title" />
+                <TableColumn fx:id="authorColumn" text="Author" />
+                <TableColumn fx:id="categoryColumn" text="Category" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+                <TableColumn fx:id="popularityColumn" text="Popularity" />
+                <TableColumn fx:id="editionColumn" text="Edition" />
+                <TableColumn fx:id="numOfPagesColumn" text="Pages" />
+                <TableColumn fx:id="stockColumn" text="Stock" />
+            </columns>
+        </TableView>
+
+
+    <VBox layoutX="20.0" layoutY="380.0" spacing="10.0">
+        <!-- Total Revenue -->
+        <Label text="Total Revenue:" style="-fx-font-weight: bold;" />
+        <Label fx:id="totalRevenueLabel" />
+
+        <!-- Total Stock -->
+        <Label text="Total Stock:" style="-fx-font-weight: bold;" />
+        <Label fx:id="totalStockLabel" />
+
+        <!-- Top Priced Books -->
+        <Label text="Top Priced Books:" style="-fx-font-weight: bold;" />
+        <Label fx:id="topBooksLabel" />
+
+        <!-- Out of Stock Books -->
+        <Label text="Out of Stock Books:" style="-fx-font-weight: bold;" />
+        <Label fx:id="outOfStockBooksLabel" />
+    </VBox>
+
+    <Button text="Go To Home Page" style="-fx-padding: 10 20 10 20;" layoutX="450.0" layoutY="380.0" onAction="#navigateToAdminView"/>
+    <Button text="Go To Manage Orders" style="-fx-padding: 10 20 10 20;" layoutX="450.0" layoutY="430.0" onAction="#navigateToOrdersManagerView"/>
+
+    <!-- Button to trigger display of inventory report -->
+    <Button text="Generate Report" layoutX="650.0" layoutY="20.0" onAction="#generateReport"
+            style="-fx-font-size: 14; -fx-padding: 10 20 10 20; -fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+
+</AnchorPane>
+

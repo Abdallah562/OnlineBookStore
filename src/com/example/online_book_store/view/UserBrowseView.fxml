@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.TilePane?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.online_book_store.controller.UserBrowseViewController" spacing="10" alignment="TOP_CENTER" prefWidth="600">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <TextField fx:id="searchField" promptText="Search by Title or Author" />
+
+    <ComboBox fx:id="categoryFilter" promptText="Filter by Category">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Science" />
+                <String fx:value="Music1" />
+                <String fx:value="Fantasy" />
+                <String fx:value="Business" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Sort by options -->
+    <ComboBox fx:id="sortOptions" promptText="Sort by">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Popularity" />
+                <String fx:value="Price" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- TableView for displaying books -->
+<!--    <TableView fx:id="tableView" prefWidth="600">-->
+<!--        <columns>-->
+<!--            <TableColumn fx:id="titleColumn" text="Title" prefWidth="150" />-->
+<!--            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150" />-->
+<!--            <TableColumn fx:id="categoryColumn" text="category" prefWidth="150" />-->
+<!--            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100" />-->
+<!--            <TableColumn fx:id="popularityColumn" text="Popularity" prefWidth="100" />-->
+<!--            <TableColumn fx:id="editionColumn" text="edition" prefWidth="150" />-->
+
+<!--        </columns>-->
+<!--    </TableView>-->
+    <TilePane fx:id="browseBooksPane" hgap="10" vgap="10" prefColumns="4" alignment="TOP_CENTER">
+
+    </TilePane>
+<!--    <Button text="Add to Cart" onAction="#addToCart" />-->
+<!--    <Button text="Remove from Cart" onAction="#removeFromCart" />-->
+
+    <Button fx:id="proceedToCheckoutButton" text="Proceed to Checkout" onAction="#proceedToCheckout"/>
+    <!-- Home button to navigate back to the home page -->
+    <Button text="Back to Home" onAction="#goToHome" />
+
+</VBox>

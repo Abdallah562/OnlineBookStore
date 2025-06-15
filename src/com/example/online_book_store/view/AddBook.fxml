@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.online_book_store.controller.AdminViewController" vgap="10" hgap="10" alignment="BASELINE_CENTER"
+          minWidth="800" minHeight="600">
+    <Label text="Adding Book" alignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Title:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="titleField" GridPane.rowIndex="1" GridPane.columnIndex="1" editable="true" promptText="Title" />
+
+    <Label text="Author:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="authorField" GridPane.rowIndex="2" GridPane.columnIndex="1" editable="true" promptText="Author" />
+
+    <Label text="Category:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="categoryField" GridPane.rowIndex="3" GridPane.columnIndex="1" editable="true" promptText="Category"/>
+
+    <Label text="Price:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="priceField" GridPane.rowIndex="4" GridPane.columnIndex="1" editable="true" promptText="Price"/>
+
+    <Label text="Popularity:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="popularityField" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="true" promptText="Popularity"/>
+
+    <Label text="Edition:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="editionField" GridPane.rowIndex="6" GridPane.columnIndex="1" editable="true" promptText="Edition"/>
+
+    <Label text="Num of Pages:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <TextField fx:id="numOfPagesField" GridPane.rowIndex="7" GridPane.columnIndex="1" editable="true" promptText="Num of Pages"/>
+
+    <Label text="Quantity:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <TextField fx:id="quantityField" GridPane.rowIndex="8" GridPane.columnIndex="1" editable="true" promptText="Quantity"/>
+
+    <Button text="Choose Image" onAction="#chooseImage" GridPane.rowIndex="9" GridPane.columnIndex="0" />
+    <ImageView fx:id="imageView" fitHeight="300" fitWidth="200"  GridPane.rowIndex="9" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+
+
+    <Button text="Add Book" onAction="#addBook" GridPane.rowIndex="10" GridPane.columnIndex="0" />
+    <Button text="Back To Home Page" onAction="#navigateToAdminView" GridPane.rowIndex="10" GridPane.columnIndex="1" />
+</GridPane>
