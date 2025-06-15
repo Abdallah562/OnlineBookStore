@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.online_book_store.controller.OrderHistoryController"
+      spacing="10" alignment="CENTER" prefWidth="750" prefHeight="400">
+
+    <!-- TableView to Display Order Details -->
+    <TableView fx:id="ordersTableView" prefWidth="600">
+        <columns>
+            <TableColumn text="Order ID" fx:id="orderIdColumn" />
+            <TableColumn text="Order Date" fx:id="orderDateColumn" />
+            <TableColumn text="Book Name" fx:id="booksnameColumn">
+                <cellValueFactory>
+                    <PropertyValueFactory property="booksname"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Total Price" fx:id="priceColumn" />
+            <TableColumn text="Status" fx:id="statusColumn" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="5" alignment="CENTER">
+        <Button fx:id="reviewButton" text="Submit Review for Selected Order" />
+        <Button text="Back to Home" onAction="#goToHome" />
+        <Button fx:id="cancelOrderButton" text="Cancel Selected Order" onAction="#handleCancelOrder" />
+    </HBox>
+
+</VBox>

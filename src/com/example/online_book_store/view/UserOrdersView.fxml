@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.online_book_store.controller.UserOrdersViewController">
+    <top>
+        <Label text="User Orders" style="-fx-font-size: 18px; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <TableView fx:id="ordersTable" prefWidth="600" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="100"/>
+                <TableColumn fx:id="orderStatusColumn" text="Status" prefWidth="200"/>
+                <TableColumn fx:id="orderBooksColumn" text="Books" prefWidth="200"/>
+                <TableColumn fx:id="totalPriceColumn" text="Total Price" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="cancelOrderButton" text="Cancel Order" onAction="#handleCancelOrder" />
+            <Button fx:id="proceedToPaymentButton" text="Proceed to Payment" onAction="#handleProceedToPayment" />
+            <Button fx:id="proceedToMainMenuButton" text="Go Back" onAction="#goToMainMenuView"/>
+        </HBox>
+    </bottom>
+</BorderPane>

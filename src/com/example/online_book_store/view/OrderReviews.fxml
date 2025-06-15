@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.online_book_store.controller.OrderReviewsController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 15;">
+
+    <Label text="Order Reviews" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="reviewsTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="commentColumn" text="Comment" prefWidth="300"/>
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Label text="Add a New Review" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Comment:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextArea fx:id="commentField" promptText="Write your feedback..." GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="submitButton" text="Submit Review" />
+        <Button fx:id="closeButton" text="Close" />
+    </HBox>
+</VBox>
